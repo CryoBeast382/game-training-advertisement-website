@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    
+    <style>
+        @import url('https://fonts.google.com/specimen/Montserrat');
+
+        :root {
+            --background: rgba(85, 214, 170, .85);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #222;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 400;
+        }
+
+        .content {
+            height: 200vh;
+            background-color: #333;
+            background-blend-mode: multiply;
+            background-size: cover;
+            display: grid;
+            place-items: center;
+        }
+
+        /* navigation styles start here*/
+
+        header {
+            background: var(--background);
+            text-align: center;
+            position: fixed;
+            z-index: 999;
+            width:100%;
+        }
+
+        .nav-toggle {
+            display:none;
+        }
+
+        .nav-toggle-lable {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 1em;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-toggle-lable span,
+        .nav-toggle-lable span::before,
+        .nav-toggle-lable::after {
+            display: block;
+            background:white;
+            height: 2px;
+            width: 2em;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .nav-toggle-lable span::before,
+        .nav-toggle-lable::after {
+            content: '';
+            position: absolute;
+        }
+
+        .nav-toggle-lable span::before {
+            bottom: 12px;
+        }
+
+        .nav-toggle-lable::after {
+            top: 33px;
+        }
+
+        nav {
+            position:absolute;
+            text-align: left;
+            top: 100%;
+            left: 0;
+            background: var(--background);
+            width: 100%;
+            transform: scale(1, 0);
+            transform-origin: top;
+            transition: transform 400ms ease-in-out;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            margin-bottom: 1em;
+            margin-left: 1em;
+        }
+
+        nav a {
+            color: red;
+            text-decoration:none;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 180ms ease-in-out;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        .nav-toggle:checked ~ nav {
+            transform: scale(1,1);
+        }
+
+        .nav-toggle:checked ~ nav a {
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 240ms;
+        }
+
+        @media screen and (min-width: 720px) {
+            .nav-toggle-lable {
+                display: none;
+            }
+
+            header {
+                display: grid;
+                grid-template-columns: 1fr auto minmax(600px, 3fr);
+            }
+
+            .logo {
+                grid-column: 2 / 3;
+            }
+
+            nav {
+                all: unset;
+                grid-column: 3 / 4;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            nav ul {
+                display: flex;
+            }
+
+            nav li {
+                margin-left:  3em;
+            }
+
+            nav a {
+                opacity: 1;
+                position: relative;
+            }
+
+            nav a::before {
+                content: '';
+                display: block;
+                height: 5px;
+                background: black;
+                position: absolute;
+                top: -.45em;
+                left: 0;
+                right: 0;
+                transform: scale(0, 1);
+                transition: transfrom ease-in-out 250ms;
+            }
+
+            nav a:hover::before {
+                transform: scale(1, 1);
+            }
+            .p1 style{
+                color: white;
+            }
+        }
+    </style>
+
+    <header>
+         <div class="logo"><img src="IMG_1336 (1).JPG" width="75"></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li> <strong><a href="https://www.youtube.com/channel/UCi2Ra_VN4Agu-ufumxAFOkQ/videos" target="_blank" rel="noopener noreferrer">Youtube Channel</a></li>
+                <li><a href="https://www.twitch.tv/cryobeast382"  target="_blank" rel="noopener noreferrer">Twitch Channel</a></li>
+                <li><a href="https://discord.gg/DekcTrcgZY"  target="_blank" rel="noopener noreferrer">Discord Server</a></li>
+                <li><a href="https://www.cooktastymeals.com/"  target="_blank" rel="noopener noreferrer">Chicken Nugget Recipe</a></strong></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-lable">
+            <span></span>
+        </label>
+    </header>
+    <style>
+        .bye {
+            text-align: center;
+        }
+        
+        .hi {
+            color: red;
+            background-color: lightgrey;
+            display: inline;
+        }
+
+        .meow {
+            color: red;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Game training advertisment website</title>
+    </head>
+    <body>
+        <div style = "position: relative; top:100px; margin-left: 10px; margin-right: 10px; text-align: center; font-size: 20px; color: white;"> Hello! I'm assuming you came here to be trained in a game right? Well if you are you are most likely in the right place! I can train you in fortnite, Dead by Daylight, Tom clancy's rainbow six siege (on pc),  Dead By Roblox, Minecraft java edition, overwatch, and Rocket League. I am on pc, so if you are on any platform besides pc and one of these games isnt cross platform then I'm sorry but I cant train you. :( If you do want to be trained though it is $2. To give me $2 and let me know that you want to be trained what you have to do is click this link: <a href="https://streamlabs.com/cryobeast382/tip" target="_blank" rel="noopener noreferrer" class="meow"> click here to sign up for training! Its $2.</a> </div>
+    </body>
+</html>
